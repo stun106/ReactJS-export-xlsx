@@ -13,8 +13,12 @@ const useGaragem = () => {
         }catch(e){
             console.error('Erro ao buscar dados da api.',e);
         }
-    },[garagens])
+    },[garagens]);
 
+    return {
+        garagens, 
+        buscarTodasGaragens
+    }
 }
 
 export default useGaragem;
