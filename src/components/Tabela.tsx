@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import useGaragem from "../hook/Garagem"
+import ExportToCSV from "./ExportarExcel";
 
 const Tabela: React.FC = () => {
     const { garagens, buscarTodasGaragens } = useGaragem();
@@ -7,11 +8,15 @@ const Tabela: React.FC = () => {
     useEffect(() => {
         buscarTodasGaragens();
     }, [])
-    console.log(garagens)
+
     return (
         <>
             <div className="container mx-auto px-4 py-8">
-                <h1 className="text-3xl font-bold mb-4">Garagem</h1>
+                <div className="flex justify-end">
+                   <ExportToCSV data={garagens} filename={"dataGaragem"} />
+                </div>
+                <h1 className="text-3xl font-bold mb-4">Garagem: {garagens.map(g => g.nome)}</h1>
+                <p>quantidade: {garagens.map(g => g.quantCarros)}</p>
                 <div className="shadow-lg rounded-lg overflow-hidden border-b border-gray-200">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-100">
@@ -37,7 +42,6 @@ const Tabela: React.FC = () => {
                     </table>
                 </div>
             </div>
-
         </>
     )
 }

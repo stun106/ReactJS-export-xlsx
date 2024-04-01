@@ -1,4 +1,4 @@
-import { IGaragem } from "../data/Garagem";
+import { IGaragem } from "../types/Garagem";
 import { mockGaragem } from "../mock/Garagem"
 
     const buscarGaragens = (): IGaragem[] => {

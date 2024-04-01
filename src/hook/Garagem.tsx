@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { buscarGaragens, buscarGaragensPorId, deletarGaragemPorId } from '../service/garagemService'
-import { IGaragem } from '../data/Garagem';
+import { IGaragem } from '../types/Garagem';
 
 const useGaragem = () => {
     const [ garagens, setGaragens] = useState<IGaragem[]>([])

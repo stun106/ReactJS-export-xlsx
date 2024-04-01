@@ -1,4 +1,4 @@
-import { IGaragem } from "../data/Garagem";
+import { IGaragem } from "../types/Garagem";
 
 export const mockGaragem:IGaragem[] = [{
   id: 1,
