@@ -13,9 +13,7 @@ Este projeto é uma implementação de um componente chamado ExportToExcel, dese
 - [Visão Geral](#visão-geral)
 - [Instalação](#instalação)
 - [Executando o Projeto](#executando-o-projeto)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
-
+  
 ---
 
 ## Visão Geral
