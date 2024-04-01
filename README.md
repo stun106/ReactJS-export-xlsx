@@ -8,13 +8,6 @@ Este projeto é uma implementação de um componente chamado ExportToExcel, dese
 
 ---
 
-## Índice
-
-- [Visão Geral](#visão-geral)
-- [Instalação](#instalação)
-  
----
-
 ## Visão Geral
 
 Este projeto foi desenvolvido utilizando React, TypeScript e Tailwind CSS.
