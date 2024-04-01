@@ -19,5 +19,5 @@ Este projeto foi desenvolvido utilizando React, TypeScript e Tailwind CSS.
 Para começar, clone o repositório e navegue até o diretório do projeto:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
-cd seu-projeto
+git clone https://github.com/stun106/ReactJS-export-xlsx.git
+cd ReactJS-export-xlsx
