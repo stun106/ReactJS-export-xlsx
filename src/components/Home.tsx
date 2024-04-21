@@ -4,17 +4,25 @@ import InputComponent from "./ui/Input";
 const Home: React.FC = () => {
     return (
         <div className="relative h-screen">
-            <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: 'url(/bg-skyline.jpg)' }}></div>
+            <div
+                className="absolute inset-0 z-0 bg-cover bg-center"
+                style={{ backgroundImage: 'url(/bg-skyline.jpg)' }}></div>
             <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <div className="bg-cover bg-center w-full h-full" style={{ backgroundImage: 'url(/fumaca.gif)', opacity: 0.5 }}>
-                    <h1 className="text-white text-center p-5" style={{ fontSize: '3rem', animation: 'police-lights 2s infinite' }}>
+                <div
+                    className="bg-cover bg-center w-full h-full"
+                    style={{ backgroundImage: 'url(/fumaca.gif)', opacity: 0.5 }}>
+                    <h1
+                        className="text-white text-center p-5"
+                        style={{ fontSize: '3rem', animation: 'police-lights 2s infinite' }}>
                         Carros Japan Drift
                     </h1>
                 </div>
             </div>
             <div className="absolute inset-0 z-20 flex items-center justify-center">
                 <div className="border border-stone-800 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg w-96 pt-5 pb-5 rounded-lg grid grid-rows-2 ">
-                    <span className="text-center mr-8 row-span-1 custom-label">Crie sua Garagem</span>
+                    <span className="text-center mr-8 row-span-1 custom-label">
+                        Crie sua Garagem
+                    </span>
                     <div className="flex flex-row justify-center items-center row-span-1 h-10">
                         <InputComponent
                             type="text"
@@ -25,7 +33,6 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
