@@ -1,41 +1,31 @@
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 *,
 
+
 /* styles.css */
 body {
   font-family: 'Permanent Marker', cursive;
 }
-
+/*h1*/
 @keyframes police-lights {
   0% { color: #ffffff; } /* Vermelho */
   25% { color: #ff0000; } /* Vermelho */
   50% { color: #0000ff; } /* Azul */
+}
+
+/*efeito vidro homePage*/
+.glass-pane {
+  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo com transparência */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+.custom-label {
+  color: rgb(31, 31, 31);
+  font-family:fantasy;
+}
+.custom-input::placeholder {
+  color: rgb(31, 31, 31);
+  font-family:fantasy;
 }
