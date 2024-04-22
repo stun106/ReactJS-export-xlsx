@@ -1,30 +1,7 @@
-import { IGaragem } from "../types/Garagem";
-import { mockGaragem } from "../mock/Garagem"
+import { Api } from "../providers/Axios"
 
-    const buscarGaragens = (): IGaragem[] => {
-        return mockGaragem;
-    }
-
-    const buscarGaragensPorId = (id: number): IGaragem | undefined => {
-        try {
-            return buscarGaragens().find(garagem => garagem.id === id);
-        }catch(e){
-            console.error('erro ao buscarGarage')
-        }
-        
-    }
-
-    const deletarGaragemPorId = (id: number): void => {
-        const idGaragem = mockGaragem.findIndex(garagem => garagem.id === id);
-        if (idGaragem !== -1) {
-            mockGaragem.splice(idGaragem, 1);
-            mockGaragem[idGaragem].quantCarros --;     
-        }
-    }
-
+const createGaragem = (nomeGaragem: string) => Api.post('/garagem/criar',nomeGaragem)
 
 export {
-    buscarGaragens,
-    buscarGaragensPorId,
-    deletarGaragemPorId,
+    createGaragem
 }

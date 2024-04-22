@@ -1,23 +1,22 @@
 import { useCallback, useState } from 'react';
-import { buscarGaragens, buscarGaragensPorId, deletarGaragemPorId } from '../service/garagemService'
 import { IGaragem } from '../types/Garagem';
+import { createGaragem } from '../service/garagemService';
 
 const useGaragem = () => {
-    const [ garagens, setGaragens] = useState<IGaragem[]>([])
+    const [ garagens, setGaragens] = useState<IGaragem | undefined>(undefined);
 
-    const buscarTodasGaragens = useCallback(() => {
-        try {
-            const response = buscarGaragens();
-            setGaragens(response);
-            return garagens
+    const criarGaragem = useCallback(async(nomeGaragem: string) => {
+        const { status } = await createGaragem(nomeGaragem)
+        try{
+            if (status === 200){
+                console.log('Garagem criada com sucesso.');
+            }
         }catch(e){
-            console.error('Erro ao buscar dados da api.',e);
+            console.error('Erro ao enviar dados para api.');
         }
-    },[garagens]);
-
+    },[])
     return {
-        garagens, 
-        buscarTodasGaragens
+        criarGaragem
     }
 }
 
