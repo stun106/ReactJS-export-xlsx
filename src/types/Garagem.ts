@@ -6,3 +6,6 @@ export interface IGaragem {
     carros: CarrosI[],
     quantCarros: number,
 }
+ export interface CreateGaragemI {
+    nome: string
+ }

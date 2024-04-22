@@ -1,14 +1,15 @@
+import { ChangeEvent, ChangeEventHandler } from "react"
+
 interface PropsInput {
     type: string
     className: string
     placeholder: string
-    onChange?: () => void
-    onClick?: () => void
+    onChange?: (e:ChangeEvent<HTMLInputElement>) => void
     style?: React.CSSProperties
     
 }
 
-const InputComponent: React.FC<PropsInput> = ({type,placeholder,className,style, onChange,onClick}:PropsInput) => {
+const InputComponent: React.FC<PropsInput> = ({type,placeholder,className,style, onChange}:PropsInput) => {
     return (
         <>
         <input 
@@ -16,7 +17,6 @@ const InputComponent: React.FC<PropsInput> = ({type,placeholder,className,style,
             type={type}
             placeholder={placeholder}
             onChange={onChange}
-            onClick={onClick}
             style={style}
           />
         </>
